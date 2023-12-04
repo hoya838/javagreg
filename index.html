@@ -6,6 +6,7 @@
     <title>Greg</title>
     <!-- css 연결 -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    
 </head>
 <body>
     <!-- 헤더 -->
@@ -26,11 +27,15 @@
     <section>
         <h1 class="main_text_h1">콘텐츠 마케팅 성과 추적 <br>모두 함께하세요.</h1>
         <h2 class="main_text_h2"><strong>Greg</strong>은 더 빠르고 효율적인 마케팅 업무를 위한 도구입니다.</h2>
-        <form class="form_send"action="/inde.jsp">
+        <form class="form_send"action="/index.jsp">
             <input class="form_send_input_email" type="email" id="emails" name="emails" value="회사이메일을 입력하세요" >
             <input class="form_send_input_submit" type="submit" value="신청하기">
           </form>
         <img class="main_banner"src="img/cover.png">
+
+        <div id="main_timer">
+
+        </div>
         <div class="index_main_tab">
             <ul>
               <li id="tab1" class="btnCon"><a class="btn first" href="#tab1"><img class="index_main_tab_menu" src="img/btn1.png"></a>
@@ -42,7 +47,9 @@
                 
               </li>
             </ul>
-          </div>  
+          </div>
+          <div class="main_price_text"> <p>가격안내</p></div>
     </section>
+    <script src="js/timer.js"></script>
 </body>
 </html>
