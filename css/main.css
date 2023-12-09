@@ -358,7 +358,7 @@ img.slider1{
 .start_form_div{
   text-align: center;
   width: 575px;
-  margin: 200px auto;
+  margin: 200px auto 0px auto;
 }
 .start_form_div h2{
   font-size: 25px;
