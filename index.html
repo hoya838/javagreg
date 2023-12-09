@@ -1,55 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greg</title>
     <!-- css 연결 -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    
+    <!-- font-awesome 추가 -->
+    <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 헤더 -->
     <!-- 필요요소 ( 로고 , 메뉴 , 로그인 , 시작하기 ) -->
-    <header>
-        <div class="hd_nav">
-            <a class="logo" href="" > <img class="logo_img" src="img/logo.png" /> </a>
-            
-                <a class="active" href="#home">제품소개</a>
-                <a href="#contact">자료실</a>
-                <a href="#about">가격안내</a>
-            <div class="nav">
-                <a class="start" href="#home">로그인</a>
-                <a class="login" href="#home">시작하기</a>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+        
+        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+        <nav class="nav">
+          <a href="#menu1"><i class="fa-solid fa-cloud"></i> 제품소개</a>
+          <a href="#menu2"><i class="fa-solid fa-wallet"></i> 요금제</a>
+          <a href="login.html" class="btn_login">로그인</a>
+          <a href="start.html" class="btn_start">신청하기</a>
+        </nav>
+      </header>
     <section>
+        
+      <img class="slider1"src="sl1.jpg" id="image">
         <h1 class="main_text_h1">콘텐츠 마케팅 성과 추적 <br>모두 함께하세요.</h1>
         <h2 class="main_text_h2"><strong>Greg</strong>은 더 빠르고 효율적인 마케팅 업무를 위한 도구입니다.</h2>
-        <form class="form_send"action="/index.jsp">
-            <input class="form_send_input_email" type="email" id="emails" name="emails" value="회사이메일을 입력하세요" >
-            <input class="form_send_input_submit" type="submit" value="신청하기">
-          </form>
-        <img class="main_banner"src="img/cover.png">
+        <form class="form_send">
+            <input class="form_send_input_email" type="email" id="emails" name="emails" placeholder="회사 이메일을 입력하세요">
+            <input class="form_send_input_submit" onclick="emailOnClick()" type="submit" value="신청하기">
+        </form>
+        <div class="main_timer_background">
+          <div id="main_timer"></div>
+      </div>
+      <ul class="partner_ul">
+        <li class="partner_li"><img src="img/c1.png"></li>
+        <li class="partner_li"><img src="img/c2.png"></li>
+        <li class="partner_li"><img src="img/c3.png"></li>
+        <li class="partner_li"><img src="img/c7.png"></li>
+        <li class="partner_li"><img src="img/c5.png"></li>
+        <li class="partner_li"><img src="img/c6.png"></li>
+      </ul>
 
-        <div id="main_timer">
+  
+        <div id="menu2" class="main_con2">
+          <h1 class="main_con1_hdname"><i class="fa-solid fa-wallet"></i> 요금제</h1>
+          <div class="main_con_price">
+              <div class="main_con_price_plan">
+                <h3 class="main_con_price_plan_name">기본</h3>
+                <p class="main_con_price_plan_price">0원/월</p>
+                <p class="main_con_price_plan_text">체류시간수집 O</p>
+                <p class="main_con_price_plan_text">전환율 수집 O</p>
 
-        </div>
-        <div class="index_main_tab">
-            <ul>
-              <li id="tab1" class="btnCon"><a class="btn first" href="#tab1"><img class="index_main_tab_menu" src="img/btn1.png"></a>
-                <div class="tabCon" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                
-              </li>
-              <li id="tab2" class="btnCon"><a class="btn" href="#tab2"><img class="index_main_tab_menu" src="img/btn2.png"></a>
-                <div class="tabCon" ><img class="index_main_tab_con_img"src="https://cdn.shopify.com/s/files/1/0070/7032/files/Introduction_To_Marketing.jpg?v=1648057035&width=1024"></div>
-                
-              </li>
-            </ul>
+                <a href="start.html" class="main_con_price_plan_link">신청하기</a>
+              </div>
+              <div class="main_con_price_plan">
+                <h3 class="main_con_price_plan_name"><i class="fa-solid fa-water"></i></h3>
+                <p class="main_con_price_plan_price">준비중입니다.</p>
+                <p class="main_con_price_plan_text">-</p>
+                <p class="main_con_price_plan_text">-</p>
+        
+                <a href="#" class="main_con_price_plan_link"  onclick="alert('준비중입니다.')">신청하기</a>
+              </div>
+              <div class="main_con_price_plan">
+                <h3 class="main_con_price_plan_name"><i class="fa-solid fa-water"></i></h3>
+                <p class="main_con_price_plan_price">준비중입니다.</p>
+                <p class="main_con_price_plan_text">-</p>
+                <p class="main_con_price_plan_text">-</p>
+                <a href="#" class="main_con_price_plan_link" onclick="alert('준비중입니다.')">신청하기</a>
+              </div>
           </div>
-          <div class="main_price_text"> <p>가격안내</p></div>
+      </div>
+        <div id="menu1" class="main_con1">
+            <h1 class="main_con1_hdname"><i class="fa-solid fa-cloud"></i> 제품소개</h1>
+
+            <div class="main_con1_con">운영중인 사이트나 블로그를 연결하세요</div>
+            <div class="main_con1_con2">연결한 블로그와 사이트에 개재된 콘텐츠와 연결된 링크가 수집됩니다.</div>
+            <div class="main_con1_con2">콘텐츠내 체류시간을 수집하세요.</div>
+            <div class="main_con1_con">콘텐츠에 연결된 외부링크 방문전환율등을 수집하세요.</div>
+        </div>
+
+
+        
     </section>
+    <footer>
+      <div class="inner">
+        <div class="footer_con"><img src="img/footer_logo.png"></div>
+        <div class="footer_copy">ⓒ 2020-2023 Greg corp.</div>
+      </div>
+    </footer>
+
+    <script>
+        //@없이도 신청되었습니다 출력문제 발생 -> includes로 포함여부 체크로 해결
+        function emailOnClick() {
+            let email = document.getElementById('emails').value;
+            if (email.includes('@')) {
+              alert('신청되었습니다.');
+            } else {
+              alert('이메일 형식이 올바르지 않습니다.');
+            }
+          }
+      </script>
+    <!-- script p.319 참고-->
     <script src="js/timer.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>

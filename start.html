@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg</title>
+    <!-- css 연결 -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- font-awesome 추가 -->
+    <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <!-- 필요요소 ( 로고 , 메뉴 , 로그인 , 시작하기 ) -->
+    <header class="header">
+        
+        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+        <nav class="nav">
+          <a href="index.html#menu1">제품소개/설명</a>
+          <a href="index.html#menu2">요금제</a>
+          <a href="login.html" class="btn_login">로그인</a>
+          <a href="start.html" class="btn_start">신청하기</a>
+        </nav>
+      </header>
+    <section>
+      <div class="start_form_div">
+        <div class="start_form_div_img"><img src="img/logo.png"></div>
+        <h2>신청하기</h2>
+        <!-- method, action 삭제-->
+        <form  id="start_form">
+          
+            <input class="start_form_input" id="id" type="text" name="Companyid" placeholder="회사아이디">
+            <input class="start_form_input" id="pass" type="password" name="Password" placeholder="비밀번호">
+            <input class="start_form_input" id="name" type="text" name="Companyname" placeholder="회사명">
+            <input class="start_form_input" id="email" type="email" name="Companyemail" placeholder="회사이메일">
+            <input class="start_form_input" id="username" type="text" name="Companyuser" placeholder="담당자 성함">
+            <input class="start_form_input" id="number" type="tel" name="Phone" placeholder="담당자 연락처">
+            <input class="start_form_input2" id="url" type="url" name="url" placeholder="운영중인 블로그,웹 url">
+            <input class="start_form_input" id="member" type="number" min="1" name="Companymember" placeholder="구성원숫자">
+            <select class="start_form_input"id="price"name="price">
+              <option value="basic" selected>기본 요금제</option>
+              <option value="no1">준비중</option>
+              <option value="no2">준비중</option>
+            </select>
+            <input class="start_form_submit" type="submit" onclick="startOnClick()"value="신청하기">
+        </form>
+    </div>
+    </section>
+    <script>
+      function startOnClick() {
+        let loginid = document.getElementById('id').value;
+        let loginpass = document.getElementById('pass').value;
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let username = document.getElementById('username').value;
+        let number = document.getElementById('number').value;
+        let url = document.getElementById('url').value;
+        let member = document.getElementById('member').value;
+        let price = document.getElementById('price').value;
+        //각 input에 값이 들어있어야합니다. && (and) , !== 빈 문자열('')이 아니라면 참(true)을, 그렇지 않다면 거짓(false)
+        if (loginid !== '' && loginpass !== '' && name !== '' && email !== '' && username !== '' && number !== '' && url !== '' && member !== '' && price !== '') {
+          alert('신청되었습니다. ' + username + ' 님 환영합니다.');
+        } else {
+          alert('신청정보를 정확하게 입력하세요');
+        }
+      }
+    </script>
+</body>
+</html>

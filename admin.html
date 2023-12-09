@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg</title>
+    <!-- css 연결 -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <!-- font-awesome 추가 -->
+    <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+        <nav class="nav">
+          <a href="index.html" class="btn_user"> 나가기 <i class="fa-solid fa-arrow-right-from-bracket"></i> </a>
+        </nav>
+    </header>
+    <div class="admin_body">
+        <div class="admin_nav">
+            <a href="#"><div class="admin_nav_menu active"><i class="fa-solid fa-house"></i></div></a>
+            <a href="#"><div class="admin_nav_menu"><i class="fa-solid fa-chart-simple"></i></div></a>
+            <a href="#"><div class="admin_nav_menu"><i class="fa-solid fa-chart-line"></i></div></a>
+        </div>
+        
+        <div class="admin_con1">
+            <div id="admin_add_link" class="admin_add_1">
+                <input type="button" class="admin_add_1_menu" onclick="adCampWrite()" value="캠페인추가하기">
+            </div>
+            <div id="admin_form_add_script"class="admin_con2">
+                <h2>캠페인추가하기</h2>
+                <!-- method, action 삭제-->
+                <form  class="admin_con2_form">
+                    <h4>캠페인 제목</h4>
+                    <input class="input_form" id="campaignTitle" type="text" name="Title" placeholder="회사아이디">
+                    <h4>유형 선택</h4>
+                    <select class="input_form"id="campaignType"name="Type">
+                        <option value="네이버블로그" selected>네이버블로그</option>
+                        <option value="웹사이트">웹사이트</option>
+                      </select>
+                    <h4>웹 URL</h4>
+                    <input class="input_form" id="webURL" type="url" name="URL" placeholder="운영중인 URL">
+                </form>
+                </form>
+                <div id="admin_adddel_link" class="admin_adddel_1">
+                    <div class="admin_adddel_1_2">
+                        <input type="button" class="admin_add_1_2_menu" onclick="adCampWriteNo()" value="등록취소">
+                        <input type="button" class="admin_add_1_2_menu" onclick="addList()" value="등록완료">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="slider1"src="sl1.jpg" id="image">
+    <div class="admin_con3">
+        <ul id="cam_list">
+        </ul>
+    </div>
+    <script>
+        //캠페인 폼을 추가합니다.
+        function adCampWrite() {
+            let addlink = document.getElementById('admin_add_link');
+            let addlinkdel = document.getElementById('admin_adddel_link');
+            let addlinkform = document.getElementById('admin_form_add_script');
+              addlink.style.display = "none";
+              addlinkdel.style.display = "block";
+              addlinkform.style.display = "block";
+          }
+        //캠페인을 등록하거나 취소합니다.
+        function adCampWriteNo() {
+            let addlink = document.getElementById('admin_add_link');
+            let addlinkdel = document.getElementById('admin_adddel_link');
+            let addlinkform = document.getElementById('admin_form_add_script');
+              addlink.style.display = "block";
+              addlinkdel.style.display = "none";
+              addlinkform.style.display = "none";
+          }
+
+        let count = 1;
+
+        function addList() {
+            
+            let ul = document.getElementById("cam_list");
+            //p.382에서 참고
+            let li = document.createElement("li");
+            let addlinkform = document.getElementById('admin_form_add_script');
+            let addlink = document.getElementById('admin_add_link');
+            // 입력된 값 가져오기
+            let campaignTitle = document.getElementById("campaignTitle").value;
+            let campaignType = document.getElementById("campaignType").value;
+            let webURL = document.getElementById("webURL").value;
+
+
+            // li 요소의 내용 설정
+            if (campaignTitle !== '' && campaignType !== '' && webURL !== '') {
+                addlinkform.style.display = "none";
+                addlink.style.display = "block";
+                alert('등록되었습니다. ' + campaignTitle + '에' + webURL +' 이 등록되었습니다.');
+                li.innerHTML = '<a href="admin_dash.html"><div class="ul_list">'+'<h4 class="li_title"><i class="fa-solid fa-globe"></i> '+ campaignTitle +'</h4>'+'</div></a>';
+                ul.appendChild(li);
+                count++;
+              } else {
+                alert('캠페인 양식에 맞게 입력하세요.');
+              }
+        }
+        
+    </script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

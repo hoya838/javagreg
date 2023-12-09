@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greg</title>
+    <!-- css 연결 -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- font-awesome 추가 -->
+    <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
+    <script>
+      function hidden() {
+        let loginok = document.getElementById('t1').style.visibility = "hidden";
+      }
+      </script>
+</head>
+<body>
+    <!-- 헤더 -->
+    <!-- 필요요소 ( 로고 , 메뉴 , 로그인 , 시작하기 ) -->
+    <header class="header">
+        
+        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+        <nav id="nav"class="nav">
+          <a href="index.html#menu1">제품소개/설명</a>
+          <a href="index.html#menu2">요금제</a>
+          <a href="login.html" class="btn_login">로그인</a>
+          <a href="start.html" class="btn_start">신청하기</a>
+        </nav>
+      </header>
+    <section class="start_login">
+      <div id="form_all2" class="login_form_div">
+        <div class="login_form_div_img"><img src="img/logo.png"></div>
+        <h2 id="login_succ_name"></h2>
+
+        <a href="admin.html"><div class="admin_href">관리자로 이동</div></a>
+      </div>
+
+
+
+
+
+      <div id="form_all" class="login_form_div">
+        <div class="login_form_div_img"><img src="img/logo.png"></div>
+        <h2>로그인</h2>
+        <!-- method, action 삭제-->
+        <form  id="login_form">
+            <input class="login_form_input" id="id" type="text" name="Companyid" placeholder="회사아이디">
+            <input class="login_form_input" id="pass" type="password" name="Password" placeholder="비밀번호">
+            <input class="login_form_submit" type="button" onclick="loginOnClick()"value="로그인">
+        </form>
+        
+    </div>
+
+    
+    </section>
+
+    <script>
+      function loginOnClick() {
+        let loginok = document.getElementById('form_all');
+        let loginokbody = document.getElementById('form_all2');
+        let loginnav = document.getElementById('nav');
+        let loginid = document.getElementById('id').value;
+        let loginpass = document.getElementById('pass').value;
+        let loginsuccname = document.getElementById('login_succ_name');
+        if (loginid !== '' && loginpass !== '') {
+          alert('로그인되었습니다.' + loginid + ' 님 환영합니다.');
+          loginok.style.display = "none";
+          loginnav.style.display = "none";
+          loginokbody.style.display = "block";
+          loginsuccname.innerHTML = loginid + " 님 반갑습니다."
+        } else {
+          alert('회사아이디와 비밀번호를 정확하게 입력하세요');
+        }
+      }
+      </script>
+      
+</body>
+</html>
