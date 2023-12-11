@@ -42,7 +42,7 @@ ul{
   .nav a {
     color: #cac9ff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 900;
     padding: 10px;
   }
@@ -308,7 +308,7 @@ img.slider1{
 .login_form_div{
   text-align: center;
   width: 575px;
-  margin: 200px auto;
+  margin:0px auto;
 }
 .login_form_div h2{
   font-size: 25px;
@@ -358,7 +358,7 @@ img.slider1{
 .start_form_div{
   text-align: center;
   width: 575px;
-  margin: 200px auto 0px auto;
+  margin: 0px auto;
 }
 .start_form_div h2{
   font-size: 25px;

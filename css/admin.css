@@ -3,6 +3,10 @@
     display:flex;
     width: 1150px;
 }
+.admin{
+    width: 1150px;
+    margin-top: 150px;
+}
 .admin_nav {
     color:#000;
     width: 5%;
@@ -116,3 +120,139 @@ h4.li_title i{
     text-align: center;
     margin-top: 6%;
 }
+
+
+
+.dash_bar {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background-color: #5d5d5d17;
+}
+  
+.dash_fill {
+    width: 0%;
+    height: 100%;
+    background-color: #3430FF;
+    animation: dashfillAnimation 5s forwards;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    color:#fff;
+    font-weight: 900;
+}
+
+.dash_fill1 {
+    width: 0%;
+    height: 100%;
+    background-color: #30ff7f;
+    animation: dashfillAnimation1 5s forwards;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    color:#fff;
+    font-weight: 900;
+}
+.dash_fill2 {
+    width: 0%;
+    height: 100%;
+    background-color: #ffba30;
+    animation: dashfillAnimation2 5s forwards;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    color:#fff;
+    font-weight: 900;
+}
+  @keyframes dashfillAnimation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 48%;
+    }
+  }
+  @keyframes dashfillAnimation1 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 62%;
+    }
+  }
+  @keyframes dashfillAnimation2 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 34%;
+    }
+  }
+  
+
+.admin_dash_tb {
+    background-color: #3430ff17;
+    padding: 30px;
+    border-radius: 5px;
+}
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #3430ff17;
+    
+  }
+  
+  th {
+    background-color: #ffffff91;
+    color: #3430FF;
+  }
+  
+
+  .admin_dash_prof_card {
+    width: 100%;
+    padding: 30px 0px;
+    background-color: #3430ff17;
+    text-align: center;
+    margin: 50px 0px;
+    border-radius: 5px;
+  }
+  
+  .admin_dash_prof_card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .admin_dash_prof_card h2 {
+    margin-bottom: 5px;
+  }
+  
+  .admin_dash_prof_card p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .admin_dash_tb_more{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: none;
+  }
+  .dash_more_name{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #242424;
+  }
+  .dash_more_btn_close{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
