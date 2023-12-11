@@ -10,10 +10,8 @@
     <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 헤더 -->
-    <!-- 필요요소 ( 로고 , 메뉴 , 로그인 , 시작하기 ) -->
+    <!-- 헤더 영역-->
     <header class="header">
-        
         <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
         <nav class="nav">
           <a href="#menu1"><i class="fa-solid fa-cloud"></i> 제품소개</a>
@@ -21,29 +19,34 @@
           <a href="login.html" class="btn_login">로그인</a>
           <a href="start.html" class="btn_start">신청하기</a>
         </nav>
-      </header>
+    </header>
+    <!-- Section 영역-->
     <section>
-        
+      <!-- Section에 배너 슬라이드 영역-->
       <img class="slider1"src="sl1.jpg" id="image">
-        <h1 class="main_text_h1">콘텐츠 마케팅 성과 추적 <br>모두 함께하세요.</h1>
+      <!-- Section에 메인 텍스트와 이메일 전송 영역-->
+        <h1 class="main_text_h1">콘텐츠 마케팅 성과 추적 분석 <br>모두 함께하세요.</h1>
         <h2 class="main_text_h2"><strong>Greg</strong>은 더 빠르고 효율적인 마케팅 업무를 위한 도구입니다.</h2>
         <form class="form_send">
             <input class="form_send_input_email" type="email" id="emails" name="emails" placeholder="회사 이메일을 입력하세요">
+            <!-- 신청하기 Submit을 누르면 eamailOnClick을 실행-->
             <input class="form_send_input_submit" onclick="emailOnClick()" type="submit" value="신청하기">
         </form>
+        <!-- 신청하기 Timer.js를 실행, 배경이미지 -->
         <div class="main_timer_background">
           <div id="main_timer"></div>
-      </div>
-      <ul class="partner_ul">
-        <li class="partner_li"><img src="img/c1.png"></li>
-        <li class="partner_li"><img src="img/c2.png"></li>
-        <li class="partner_li"><img src="img/c3.png"></li>
-        <li class="partner_li"><img src="img/c7.png"></li>
-        <li class="partner_li"><img src="img/c5.png"></li>
-        <li class="partner_li"><img src="img/c6.png"></li>
-      </ul>
+        </div>
+        <!-- 서비스사용회사 영역 -->
+        <ul class="partner_ul">
+          <li class="partner_li"><img src="img/c1.png"></li>
+          <li class="partner_li"><img src="img/c2.png"></li>
+          <li class="partner_li"><img src="img/c3.png"></li>
+          <li class="partner_li"><img src="img/c7.png"></li>
+          <li class="partner_li"><img src="img/c5.png"></li>
+          <li class="partner_li"><img src="img/c6.png"></li>
+        </ul>
 
-  
+        <!-- 요금제 -->
         <div id="menu2" class="main_con2">
           <h1 class="main_con1_hdname"><i class="fa-solid fa-wallet"></i> 요금제</h1>
           <div class="main_con_price">
@@ -71,7 +74,9 @@
                 <a href="#" class="main_con_price_plan_link" onclick="alert('준비중입니다.')">신청하기</a>
               </div>
           </div>
-      </div>
+        </div>
+
+        <!-- 제품소개 -->
         <div id="menu1" class="main_con1">
             <h1 class="main_con1_hdname"><i class="fa-solid fa-cloud"></i> 제품소개</h1>
 
@@ -80,10 +85,9 @@
             <div class="main_con1_con2">콘텐츠내 체류시간을 수집하세요.</div>
             <div class="main_con1_con">콘텐츠에 연결된 외부링크 방문전환율등을 수집하세요.</div>
         </div>
-
-
-        
     </section>
+
+    <!-- 하단 -->
     <footer>
       <div class="inner">
         <div class="footer_con"><img src="img/footer_logo.png"></div>
@@ -101,8 +105,9 @@
               alert('이메일 형식이 올바르지 않습니다.');
             }
           }
-      </script>
+    </script>
     <!-- script p.319 참고-->
+    <!-- timer.js, slider.js 추가-->
     <script src="js/timer.js"></script>
     <script src="js/slider.js"></script>
 </body>

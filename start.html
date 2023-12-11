@@ -10,25 +10,23 @@
     <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 헤더 -->
-    <!-- 필요요소 ( 로고 , 메뉴 , 로그인 , 시작하기 ) -->
+    <!-- 헤더 영역-->
     <header class="header">
-        
-        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
-        <nav class="nav">
-          <a href="index.html#menu1">제품소개/설명</a>
-          <a href="index.html#menu2">요금제</a>
-          <a href="login.html" class="btn_login">로그인</a>
-          <a href="start.html" class="btn_start">신청하기</a>
-        </nav>
-      </header>
+      <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+      <nav class="nav">
+        <a href="#menu1"><i class="fa-solid fa-cloud"></i> 제품소개</a>
+        <a href="#menu2"><i class="fa-solid fa-wallet"></i> 요금제</a>
+        <a href="login.html" class="btn_login">로그인</a>
+        <a href="start.html" class="btn_start">신청하기</a>
+      </nav>
+    </header>
+     <!-- Section 영역-->
     <section>
       <div class="start_form_div">
         <div class="start_form_div_img"><img src="img/logo.png"></div>
         <h2>신청하기</h2>
-        <!-- method, action 삭제-->
+        <!-- 신청하기 폼-->
         <form  id="start_form">
-          
             <input class="start_form_input" id="id" type="text" name="Companyid" placeholder="회사아이디">
             <input class="start_form_input" id="pass" type="password" name="Password" placeholder="비밀번호">
             <input class="start_form_input" id="name" type="text" name="Companyname" placeholder="회사명">
@@ -42,12 +40,14 @@
               <option value="no1">준비중</option>
               <option value="no2">준비중</option>
             </select>
+            <!-- 신청하기 클릭시 startOnClick 실행-->
             <input class="start_form_submit" type="submit" onclick="startOnClick()"value="신청하기">
         </form>
     </div>
     </section>
     <script>
       function startOnClick() {
+        //id value 값
         let loginid = document.getElementById('id').value;
         let loginpass = document.getElementById('pass').value;
         let name = document.getElementById('name').value;
@@ -59,7 +59,7 @@
         let price = document.getElementById('price').value;
         //각 input에 값이 들어있어야합니다. && (and) , !== 빈 문자열('')이 아니라면 참(true)을, 그렇지 않다면 거짓(false)
         if (loginid !== '' && loginpass !== '' && name !== '' && email !== '' && username !== '' && number !== '' && url !== '' && member !== '' && price !== '') {
-          alert('신청되었습니다. ' + username + ' 님 환영합니다.');
+          alert('신청되었습니다. ' + username + ' 님');
         } else {
           alert('신청정보를 정확하게 입력하세요');
         }

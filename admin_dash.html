@@ -4,57 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greg</title>
-    <!-- css 연결 -->
+    <!-- css 연결 / admin css 추가 연결-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/admin.css">
     <!-- font-awesome 추가 -->
     <script src="https://kit.fontawesome.com/42a0ccbcc3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- 헤더 영역-->
     <header class="header">
-        <div class="logo"><a href="index.html"><img class="img_logo"src="img/logo.png"></a></div>
+        <div class="logo"><a href="admin.html"><img class="img_logo"src="img/logo.png"></a></div>
         <nav class="nav">
-          <a href="admin.html" class="btn_user"> 관리자 화면으로</a>
+          <a href="admin.html" class="btn_user">관리자 홈으로</a>
         </nav>
     </header>
-
     <div class="admin">
+        <!-- 배너 슬라이드 영역-->
         <img class="slider1"src="sl1.jpg" id="image">
+        <!-- 등록된 캠페인 사이트 등록 예시-->
         <div class="admin_dash_prof_card">
             <img src="img/blog1.png" alt="프로필 이미지">
             <h2>AB블로그</h2>
             <p><i class="fa-solid fa-link"></i> blog.naver.com/abab</p>
           </div>
+          <!-- 등록된 사이트내 콘텐츠 출력-->
           <h1 class="main_con1_hdname"><i class="fa-solid fa-rectangle-list"></i> 등록된 콘텐츠</h1>
-        <div class="admin_dash_tb">
-        <table>
-            <thead>
-              <tr>
-                <th>제목</th>
-                <th>URL</th>
-                <th>등록날짜</th>
-                <th>전일대비</th>
-                <th>콘텐츠내 링크수</th>
-                <th>성과</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>브랜드마케팅의..</td>
-                <td>https://blog.naver.com/abab/aa</td>
-                <td>2023.12.08</td>
-                <td>25%</td>
-                <td>1개</td>
-                <td><input type="button" class="admin_add_1_menu" id="dashMorebtn" onclick="dashMore()" value="자세히"></td>
-              </tr>
-            </tbody>
-          </table>
-          <p>등록된 웹 주소를 기반하여 새로 추가된 콘텐츠를 실시간으로 추적합니다.</p>
+            <div class="admin_dash_tb">
+            <table>
+                <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>URL</th>
+                    <th>등록날짜</th>
+                    <th>전일대비</th>
+                    <th>콘텐츠내 링크수</th>
+                    <th>성과</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>브랜드마케팅의..</td>
+                    <td>https://blog.naver.com/abab/aa</td>
+                    <td>2023.12.08</td>
+                    <td>25%</td>
+                    <td>1개</td>
+                     <!-- 자세히 버튼 클릭시 dashMore 실행 -->
+                    <td><input type="button" class="admin_add_1_menu" id="dashMorebtn" onclick="dashMore()" value="자세히"></td>
+                </tr>
+                </tbody>
+            </table>
+            <p>등록된 웹 주소를 기반하여 새로 추가된 콘텐츠를 실시간으로 추적합니다.</p>
         </div>
     </div>
+    <!-- 자세히 버튼 클릭시 dashMore 실행시 콘텐츠 성과 출력-->
     <div id="admin_dash_tb_more_script" class="admin_dash_tb_more">
         <h1 class="main_con1_hdname"><i class="fa-solid fa-square-poll-horizontal"></i> 콘텐츠 성과</h1>
         <div class="admin_dash_tb">
+            <!-- 유입키워드 분석 바 애니메이션 영역 -->
             <div class="dash_more_name">유입키워드 분석</div>
             <p><i class="fa-solid fa-hashtag"></i> 콘텐츠마케팅</p>
                 <div class="dash_bar">
@@ -68,15 +74,15 @@
                 <div class="dash_bar">
                     <div class="dash_fill2">34%</div>
                 </div>
-
+            <!-- 콘텐츠 방문자데이터 table 영역 -->
             <div class="dash_more_name">콘텐츠 방문자데이터</div>
                 <table>
                     <thead>
-                    <tr>
-                        <th>날짜</th>
-                        <th>방문자</th>
-                        <th>평균체류시간</th>
-                    </tr>
+                        <tr>
+                            <th>날짜</th>
+                            <th>방문자</th>
+                            <th>평균체류시간</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -101,15 +107,16 @@
                         </tr>
                     </tbody>
               </table>
+              <!-- 외부링크 전환 table 영역 -->
               <div class="dash_more_name">외부링크 전환</div>
                 <table>
                     <thead>
-                    <tr>
-                        <th>날짜</th>
-                        <th>방문자</th>
-                        <th>1번외부링크 클릭수</th>
-                        <th>중복클릭수</th>
-                    </tr>
+                        <tr>
+                            <th>날짜</th>
+                            <th>방문자</th>
+                            <th>1번외부링크 클릭수</th>
+                            <th>중복클릭수</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -138,15 +145,16 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- 콘텐츠 주요 키워드 분석 -->
                 <div class="dash_more_name">콘텐츠 주요 키워드 분석</div>
                 <table>
                     <thead>
-                    <tr>
-                        <th>키워드</th>
-                        <th>네이버 월간 검색량</th>
-                        <th>구글 월간 검색량</th>
-                        <th>키워드 반복횟수</th>
-                    </tr>
+                        <tr>
+                            <th>키워드</th>
+                            <th>네이버 월간 검색량</th>
+                            <th>구글 월간 검색량</th>
+                            <th>키워드 반복횟수</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -157,6 +165,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <!-- 닫기 버튼 클릭시 dashMoreClose 실행 -->
                 <div class="dash_more_btn_close">
                     <input type="button" class="admin_add_1_menu" id="dashMoreClose" onclick="dashMoreClose()" value="닫기">
                 </div>
@@ -174,6 +183,7 @@
             dashMorecon.style.display = "none";
         }
     </script>
+    <!-- slider.js 추가--> 
     <script src="js/slider.js"></script>
 </body>
 </html>
